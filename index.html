@@ -24,9 +24,24 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div id="list-sites" class="list-sites">
+                    <div id="list-sites-wrapper" class="list-sites">
                         <h2>List of sites</h2>
-                        
+                        <div id="country-selected" style="display: none;">
+                            <table class="table table-bordered" >
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">URL</th>
+                                </tr>
+                                </thead>
+                                <tbody id=list-sites>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="no-country-selected" style="display: block;">
+                            <p>Any country selected or any site was found for the clicked country!</p>
+                        </div>
                     </div>
                 </div>
             </div>
