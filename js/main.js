@@ -4,17 +4,16 @@ $(document).ready(function (){
         {code: 'BR', country: 'Brazil', links: [{label: 'Regia de Brasília - Distrito Federal', url: 'https://legiomariae.com/'}]}
     ]
 
-    function selectCountry(e, code) {
-        let $tagListWrapper = $('#list-sites-wrapper')
-        let $tagList = $tagListWrapper.find('#list-sites')
-        let $tagCountrySelected = $tagListWrapper.find('#country-selected')
-        let $tagNoCountrySelected = $tagListWrapper.find('#no-country-selected') 
+    function scrollTo(href) {
+        $('html, body')
+        .animate({ 
+            scrollTop: $(href).offset().top
+        }, 500, 'linear');
+    }
 
-        $tagList.children().remove()
-
-        
-        
+    function createSiteListTags(code, tagList) {
         let itemCountry = hashSitesByCountry.find( item =>  item.code === code )
+        let $tagList = $(tagList)
         itemCountry.links.forEach(function (item, index) {
             let $trTag = $('<tr class="row-data-site">')
             let $tdTag = $('<td>')
@@ -26,8 +25,21 @@ $(document).ready(function (){
             $tagList.append($trTag)
         });
 
+    }
+
+    function selectCountry(e, code) {
+        let $tagListWrapper = $('#list-sites-wrapper')
+        let $tagList = $tagListWrapper.find('#list-sites')
+        let $tagCountrySelected = $tagListWrapper.find('#country-selected')
+        let $tagNoCountrySelected = $tagListWrapper.find('#no-country-selected') 
+
+        $tagList.children().remove()
+        
+        createSiteListTags(code, $tagList)
+
         $tagCountrySelected.css('display', 'block')
         $tagNoCountrySelected.css('display', 'none')
+        scrollTo('#list-sites-wrapper')
     }
     
     // Render the map
