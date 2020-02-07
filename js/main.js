@@ -14,16 +14,23 @@ $(document).ready(function (){
     function createSiteListTags(code, tagList) {
         let itemCountry = hashSitesByCountry.find( item =>  item.code === code )
         let $tagList = $(tagList)
-        itemCountry.links.forEach(function (item, index) {
-            let $trTag = $('<tr class="row-data-site">')
-            let $tdTag = $('<td>')
-            let $aTag = $('<a href="' + item.url + ' " target="_blank">')
-            
-            $trTag.append($tdTag.clone(1).text(index + 1))
-            $trTag.append($tdTag.clone(1).text(item.label))
-            $trTag.append($tdTag.clone(1).append($aTag.text(item.url)))
-            $tagList.append($trTag)
-        });
+
+        if (itemCountry) {
+            itemCountry.links.forEach(function (item, index) {
+                let $trTag = $('<tr class="row-data-site">')
+                let $tdTag = $('<td>')
+                let $aTag = $('<a href="' + item.url + ' " target="_blank">')
+                
+                $trTag.append($tdTag.clone(1).text(index + 1))
+                $trTag.append($tdTag.clone(1).text(item.label))
+                $trTag.append($tdTag.clone(1).append($aTag.text(item.url)))
+                $tagList.append($trTag)
+            });
+
+            return true
+        }
+
+        return false
 
     }
 
@@ -35,11 +42,16 @@ $(document).ready(function (){
 
         $tagList.children().remove()
         
-        createSiteListTags(code, $tagList)
+        if (createSiteListTags(code, $tagList)) {
+            $tagCountrySelected.css('display', 'block')
+            $tagNoCountrySelected.css('display', 'none')
+            scrollTo('#list-sites-wrapper')
+        } else {
+            $tagCountrySelected.css('display', 'none')
+            $tagNoCountrySelected.css('display', 'block')
+            scrollTo('#list-sites-wrapper')
+        }
 
-        $tagCountrySelected.css('display', 'block')
-        $tagNoCountrySelected.css('display', 'none')
-        scrollTo('#list-sites-wrapper')
     }
     
     // Render the map
