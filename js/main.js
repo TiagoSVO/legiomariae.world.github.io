@@ -1,7 +1,7 @@
 $(document).ready(function (){
     const hashSitesByCountry = [
-        {code: 'AR', country: 'Argentina', links: [{label: 'Regia de Argentina - Distrito Federal', url: 'https://legiomariae.com/'}]},
-        {code: 'BR', country: 'Brazil', links: [{label: 'Regia de Brasília - Distrito Federal', url: 'https://legiomariae.com/'}]}
+        {code: 'IE', country: 'Ireland', links: [{label: 'Concilium Legionis Website (The International Headquarters of the Legion of Mary)', url: 'http://www.legionofmary.ie/'}]},
+        {code: 'BR', country: 'Brazil', links: [{label: 'Brasília\'s Regia - Federal District', url: 'https://legiomariae.com/'}]}
     ]
 
     function scrollTo(href) {
