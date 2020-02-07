@@ -3,52 +3,75 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Legio Mariae World</title>
+        <title>Legio Mariae's World</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous" />
         <link rel="stylesheet" href="./css/jquery-jvectormap-2.0.5.css"/>
         <link rel="stylesheet" href="./css/main.css"/>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <header>
-                        <div class="top-nav-menu">
-                            <h1 class="text-left">Welcome to Legio Mariae's World</h1>
-                        </div>
-                    </header>
+        <header>
+            <div class="top-nav-menu">
+                <div class="container">
+                    <h1 class="text-left">Legio Mariae</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
+        </header>
+        <main>
+            <section class="title-content">
+                <div class="container">
+                    <h1>Welcome to Legio Mariae's World</h1>
+                    <small>Select a country to list all avaliable sites on it.</small>
+                    <hr/>
+                </div>
+            </section>
+            <section id="section-map">
+                <div class="map-wrapper">
                     <div id="map" class="map"></div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div id="list-sites-wrapper" class="list-sites">
-                        <h2>List of sites</h2>
-                        <hr/>
-                        <div id="country-selected" style="display: none;">
-                            <table class="table table-bordered" >
-                                <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">URL</th>
-                                </tr>
-                                </thead>
-                                <tbody id=list-sites>
-                                </tbody>
-                            </table>
+            </section>
+            <section class="section-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            
                         </div>
-                        <div id="no-country-selected" style="display: block;">
-                            <p>Any country selected or any site was found for the clicked country!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="list-sites-wrapper" class="list-sites">
+                                <h2>List of sites</h2>
+                                <hr/>
+                                <div id="country-selected" style="display: none;">
+                                    <table class="table table-bordered" >
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">URL</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id=list-sites>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="no-country-selected" style="display: block;">
+                                    <p>Any country selected or any site was found for the clicked country!</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <hr/>
+            </section>
+        </main>
+        <footer>
+
+        </footer>        
 
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

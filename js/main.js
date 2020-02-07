@@ -46,7 +46,7 @@ $(document).ready(function (){
     $('#map').vectorMap({
         map: 'world_mill',
         onRegionClick: selectCountry,
-        backgroundColor: '#ff0000'
+        backgroundColor: 'rgba(255, 0, 0, 0)'
     });
 
 });
