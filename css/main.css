@@ -26,9 +26,22 @@ h1, h2, h3 {
     z-index: 9;
 }
 
+.top-nav-menu--logo {
+    float: left;
+    height: 45px;
+    position: relative;
+    top: 3px
+}
+
+.top-nav-menu--title {
+    position: relative;
+    top: 18px;
+    left: 10px;
+}
+
 .top-nav-menu h1 {
     font-size: 1.3em;
-    line-height: 50px;
+    line-height: 45px;
     margin-bottom: 5px;
     font-family: 'Legio Mariae (OEF)';
     color: #ffffff;
@@ -37,6 +50,12 @@ h1, h2, h3 {
 .map-wrapper {
     background-image: radial-gradient(#e85353, #820101);
     padding: 25px;
+    position: relative;
+}
+
+.logo-fixed-in-sectioncontent {
+    position: absolute;
+
 }
 
 .map {
