@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="shortcut icon" href="./images/vexillium_Branco.svg" type="image/x-icon" />
         <title>Legio Mariae's World</title>
         <link rel="stylesheet" href="./css/fonts/legio_font.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous" />
@@ -14,7 +15,7 @@
         <header>
             <div class="top-nav-menu">
                 <div class="container">
-                    <img src="images/vexillium_Branco.svg" class="top-nav-menu--logo"/>
+                    <img src="./images/vexillium_Branco.svg" class="top-nav-menu--logo"/>
                     <h1 class="text-left" class="top-nav-menu--title">
                         Legio Mariae
                     </h1>
@@ -55,7 +56,7 @@
                                     </table>
                                 </div>
                                 <div id="no-country-selected" style="display: block;">
-                                    <p>Any country selected or any site was found for the clicked country!</p>
+                                    <p>Any site was found for the <span id="name-country-without-website"></span> yet!</p>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +65,28 @@
             </section>
         </main>
         <footer>
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center main-text-footer">
+                            The Legion of Mary is a lay apostolic association of Catholics who, 
+                            with the sanction of the Church and under the powerful leadership of Mary Immaculate, 
+                            Mediatrix of All Graces, serve the Church and their neighbour 
+                            on a voluntary basis in about 170 countries. 
+                            With the approval and support of the Popes and 
+                            a great many Bishops, Priests and Religious, 
+                            as well as the prayers and efforts of legionaries, the Legion, 
+                            by the grace of God, has grown into a worldwide organisation with several million members.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="images/vexillium_Branco.svg" class="footer-central--logo"/>
+            </div>
+            <div class="text-center date-text-footer">
+                <p>© <span id="footer-year"></span> Legion of Mary </p>
+            </div>
         </footer>        
 
         <!-- Scripts -->

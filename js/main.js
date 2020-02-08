@@ -81,7 +81,6 @@ $(document).ready(function (){
                 
                 $trTag.append($tdTag.clone(1).text(index + 1))
                 $trTag.append($tdTag.clone(1).text(item.label))
-                // $trTag.append($tdTag.clone(1).append($aTag.text(item.url)))
                 $trTag.append($tdTag.clone(1).append($aTag.text('Go to site')))
                 $tagList.append($trTag)
             });
@@ -93,31 +92,43 @@ $(document).ready(function (){
 
     }
 
-    function selectCountry(e, code) {
+    function selectCountry(mapy, e, code) {
         let $tagListWrapper = $('#list-sites-wrapper')
         let $tagList = $tagListWrapper.find('#list-sites')
         let $tagCountrySelected = $tagListWrapper.find('#country-selected')
-        let $tagNoCountrySelected = $tagListWrapper.find('#no-country-selected') 
+        let $tagNoCountrySelected = $tagListWrapper.find('#no-country-selected')
+        let $tagSpanCountryWithoutSite = $('#name-country-without-website')
 
         $tagList.children().remove()
         
         if (createSiteListTags(code, $tagList)) {
             $tagCountrySelected.css('display', 'block')
             $tagNoCountrySelected.css('display', 'none')
-            scrollTo('#list-sites-wrapper')
         } else {
             $tagCountrySelected.css('display', 'none')
             $tagNoCountrySelected.css('display', 'block')
-            scrollTo('#list-sites-wrapper')
+            $tagSpanCountryWithoutSite.text(mapy.getRegionName(code))
         }
+
+        if (e) scrollTo('#list-sites-wrapper') 
 
     }
     
     // Render the map
-    $('#map').vectorMap({
+    var mymap = new jvm.Map({
+        container: $('#map'),
         map: 'world_mill',
-        onRegionClick: selectCountry,
+        onRegionClick: function (e, code) {selectCountry(mymap, e, code)},
         backgroundColor: 'rgba(255, 0, 0, 0)'
     });
+
+    function iniCountry() {
+        let $tagFooterYear = $("#footer-year")
+        let dt = new Date
+        selectCountry(mymap, null, 'IE')
+        $tagFooterYear.text(dt.getFullYear())
+    }
+
+    iniCountry()
 
 });
