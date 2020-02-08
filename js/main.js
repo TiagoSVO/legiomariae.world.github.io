@@ -1,7 +1,65 @@
 $(document).ready(function (){
     const hashSitesByCountry = [
-        {code: 'IE', country: 'Ireland', links: [{label: 'Concilium Legionis Website (The International Headquarters of the Legion of Mary)', url: 'http://www.legionofmary.ie/'}]},
-        {code: 'BR', country: 'Brazil', links: [{label: 'Brasília\'s Regia - Federal District', url: 'https://legiomariae.com/'}]}
+        {code: 'IE', country: 'Ireland', links: [
+            {label: 'Concilium Legionis Website (The International Headquarters of the Legion of Mary)', url: 'http://www.legionofmary.ie/'},
+            {label: 'Deus et Patria Ireland', url: 'http://www.legionofmary-deusetpatria.com/'}
+        ]},
+        {code: 'US', country: 'United States of America', links: [
+            {label: 'San Francisco Senatus', url: 'http://www.sfsenatus.com/'},
+            {label: 'Cincinnati Senatus', url: 'http://www.sfsenatus.com/'},
+            {label: 'St. Louis Senatus', url: 'http://legionofmarystlsenatus.org'},
+            {label: 'San Francisco Senatus', url: 'http://www.sfsenatus.com/'},
+            {label: 'New York Senatus', url: 'https://www.legion-of-mary-ny.org/'},
+            {label: 'Chicago Senatus', url: 'https://legionofmarychicago.org/'},
+            {label: 'Houston Senatus', url: 'http://www.legion-of-mary-houston.com/'},
+            {label: 'Cincinnati Senatus', url: 'http://legionofmarycincinnatisenatus.org/'},
+            {label: 'Boston Senatus', url: 'https://www.newenglandlegionofmary.org/'},
+            {label: 'Arlington Regia Website', url: 'http://www.arlingtonregia.com/'},
+            {label: 'Detroit Regia', url: 'http://www.legionofmarymichigan.org/'},
+            {label: 'Miami Regia', url: 'http://www.legionofmarymiamiregia.com/'},
+            {label: 'Legion of Mary - Tidewater, VA USA', url: 'http://www.legionofmarytidewater.com/index.htm'},
+            {label: 'Father Fran Peffley’s Unofficial Legion Website', url: 'http://www.legionofmary.org'},
+            {label: 'Legion of Mary, Senatus of Philadelphia', url: 'http://philadelphiasenatus.org/'},
+            
+        ]},
+        {code: 'AT', country: 'Austria', links: [
+            {label: 'Legion of Mary, Senatus of Austria', url: 'http://www.legion-mariens.at/'}
+        ]},
+        {code: 'AU', country: 'Australia', links: [
+            {label: 'Legion of Mary, Senatus of Melbourne', url: 'https://www.legionofmary.net.au/'},
+            {label: 'Legion of Mary, Senatus of Sydney', url: 'https://legionofmary.org.au/'}
+        ]},
+        {code: 'BE', country: 'Belgium', links: [
+            {label: 'Legion of Mary website for the Netherlands and Belgium', url: 'http://www.legioenvanmaria.nl/'}
+        ]},
+        {code: 'BR', country: 'Brazil', links: [
+            {label: 'Brasília\'s Regia - Federal District', url: 'https://legiomariae.com/'}
+        ]},
+        {code: 'CO', country: 'Colombia', links: [
+            {label: 'Legion of Mary, Senatus of Bogotá', url: 'http://legiondemariabogota.org.co/'},
+            {label: 'Legion of Mary, Senatus of Medellin', url: 'http://legiondemariamed.blogspot.com/'}
+        ]},
+        {code: 'DE', country: 'Germany', links: [
+            {label: 'Legion of Mary, Frankfurt Senatus', url: 'https://www.legion-mariens.de/'}
+        ]},
+        {code: 'ES', country: 'Spain', links: [
+            {label: 'Legion of Mary, Madrid Senatus', url: 'http://www.legiondemaria.es/'}
+        ]},
+        {code: 'FR', country: 'France', links: [
+            {label: 'Legion of Mary, Montreal Senatus', url: 'https://www.smlm.org/bienvenue'}
+        ]},
+        {code: 'GB', country: 'United Kingdom', links: [
+            {label: 'Legion of Mary website for England and Wales', url: 'http://legionofmary.org.uk/'}
+        ]},
+        {code: 'IT', country: 'Italy', links: [
+            {label: 'Legion of Mary website for Malta', url: 'https://claimser.wixsite.com/legjun-ta-marija'}
+        ]},
+        {code: 'MY', country: 'Malaysia', links: [
+            {label: 'Legion of Mary, Senatus of Singapore', url: 'http://legiomariae.net/'}
+        ]},
+        {code: 'NL', country: 'Netherlands', links: [
+            {label: 'Legion of Mary website for the Netherlands and Belgium', url: 'http://www.legioenvanmaria.nl/'}
+        ]}, 
     ]
 
     function scrollTo(href) {
