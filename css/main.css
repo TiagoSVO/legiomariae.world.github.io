@@ -88,6 +88,12 @@ footer {
     margin: 25px 0 0;
 }
 
+.date-text-footer a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .date-text-footer p {
     margin-bottom: 0px;
 }

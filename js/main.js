@@ -5,21 +5,18 @@ $(document).ready(function (){
             {label: 'Deus et Patria Ireland', url: 'http://www.legionofmary-deusetpatria.com/'}
         ]},
         {code: 'US', country: 'United States of America', links: [
-            {label: 'San Francisco Senatus', url: 'http://www.sfsenatus.com/'},
-            {label: 'Cincinnati Senatus', url: 'http://www.sfsenatus.com/'},
-            {label: 'St. Louis Senatus', url: 'http://legionofmarystlsenatus.org'},
-            {label: 'San Francisco Senatus', url: 'http://www.sfsenatus.com/'},
-            {label: 'New York Senatus', url: 'https://www.legion-of-mary-ny.org/'},
-            {label: 'Chicago Senatus', url: 'https://legionofmarychicago.org/'},
-            {label: 'Houston Senatus', url: 'http://www.legion-of-mary-houston.com/'},
-            {label: 'Cincinnati Senatus', url: 'http://legionofmarycincinnatisenatus.org/'},
-            {label: 'Boston Senatus', url: 'https://www.newenglandlegionofmary.org/'},
             {label: 'Arlington Regia Website', url: 'http://www.arlingtonregia.com/'},
+            {label: 'Boston Senatus', url: 'https://www.newenglandlegionofmary.org/'},
+            {label: 'Chicago Senatus', url: 'https://legionofmarychicago.org/'},
+            {label: 'Cincinnati Senatus', url: 'https://legionofmarycincinnatisenatus.org/'},
             {label: 'Detroit Regia', url: 'http://www.legionofmarymichigan.org/'},
-            {label: 'Miami Regia', url: 'http://www.legionofmarymiamiregia.com/'},
-            {label: 'Legion of Mary - Tidewater, VA USA', url: 'http://www.legionofmarytidewater.com/index.htm'},
             {label: 'Father Fran Peffley’s Unofficial Legion Website', url: 'http://www.legionofmary.org'},
+            {label: 'Legion of Mary - Tidewater, VA USA', url: 'http://www.legionofmarytidewater.com/index.htm'},
             {label: 'Legion of Mary, Senatus of Philadelphia', url: 'http://philadelphiasenatus.org/'},
+            {label: 'Miami Regia', url: 'http://www.legionofmarymiamiregia.com/'},
+            {label: 'New York Senatus', url: 'https://www.legion-of-mary-ny.org/'},
+            {label: 'San Francisco Senatus', url: 'http://www.sfsenatus.com/'},
+            {label: 'St. Louis Senatus', url: 'http://legionofmarystlsenatus.org'},
             
         ]},
         {code: 'AT', country: 'Austria', links: [
@@ -33,7 +30,10 @@ $(document).ready(function (){
             {label: 'Legion of Mary website for the Netherlands and Belgium', url: 'http://www.legioenvanmaria.nl/'}
         ]},
         {code: 'BR', country: 'Brazil', links: [
-            {label: 'Brasília\'s Regia - Federal District', url: 'https://legiomariae.com/'}
+            {label: 'Belo Horizonte\'s Senatus - Minas Gerais', url: 'https://www.legiaodemariabh.org.br/'},
+            {label: 'Brasília\'s Regia - Federal District', url: 'https://legiomariae.com.br/'},
+            {label: 'Rio de Janeiro\'s Senatus - Rio de Janeiro', url: 'https://www.legiaodemaria.org.br/'},
+            {label: 'São Paulo\'s Senatus - São Paulo', url: 'https://www.senatus.org.br/'}
         ]},
         {code: 'CO', country: 'Colombia', links: [
             {label: 'Legion of Mary, Senatus of Bogotá', url: 'http://legiondemariabogota.org.co/'},
@@ -72,6 +72,7 @@ $(document).ready(function (){
     function createSiteListTags(code, tagList) {
         let itemCountry = hashSitesByCountry.find( item =>  item.code === code )
         let $tagList = $(tagList)
+        
 
         if (itemCountry) {
             itemCountry.links.forEach(function (item, index) {
